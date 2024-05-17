@@ -21,15 +21,13 @@ namespace GuessTheNumber
             // Game loop
             while (!guessedCorrectly)
             {
-                Console.Write("Take a guess: ");
-                guess = Convert.ToInt32(Console.ReadLine());
+                view.TakeGuess();
+                guess = view.GetGuess();
                 attempts++;
 
                 if (guess == targetNumber)
                 {
-                    Console.WriteLine(
-                        "Congratulations! You guessed the number correctly!");
-                    Console.WriteLine("Number of attempts: " + attempts);
+                    view.CorrectNumber(attempts);
                     guessedCorrectly = true;
                 }
                 else if (guess < targetNumber)

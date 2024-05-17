@@ -13,9 +13,20 @@ namespace GuessTheNumber
             Console.WriteLine("I have chosen a number between 1 and 100.");
         }
 
-        public void CorrectNumber()
+        public void TakeGuess()
         {
+            Console.Write("Take a guess: ");
+        }
 
+        public int GetGuess()
+        {
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        public void CorrectNumber(int attempts)
+        {
+            Console.WriteLine("Congratulations! You guessed the number correctly!");
+            Console.WriteLine("Number of attempts: " + attempts);
         }
 
         public void BiggerWrongNumber()

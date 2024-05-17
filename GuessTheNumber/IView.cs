@@ -9,12 +9,16 @@ namespace GuessTheNumber
     {
         void Intro();
 
-        void CorrectNumber();
+        void TakeGuess();
+
+        int GetGuess();
+
+        void CorrectNumber(int attempts);
 
         void BiggerWrongNumber();
 
         void SmallerWrongNumber();
 
-        
+        void Final();
     }
 }
